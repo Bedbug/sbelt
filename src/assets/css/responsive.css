@@ -1,6 +1,21 @@
 /**=====================
      63. Responsive CSS Start
 ==========================**/
+@media only screen and (max-width: 1300px){
+  .page-wrapper .page-main-header ul{
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .mobile-sidebar{
+    visibility: visible !important;
+    font-size: 20px;
+  }
+}
+.mobile-sidebar{
+  visibility: hidden;
+}
+
 /* ========= min and max scss for 1200 to 1366 screen ========= */
 @media screen and (max-width: 1660px) {
   .vertical-menu-main .mega-menu {

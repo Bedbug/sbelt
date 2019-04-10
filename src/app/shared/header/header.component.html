@@ -9,18 +9,10 @@
         </div>
     </div>
     <div class="main-header-right row" header-bg-color="bg-success">
-        <div class="mobile-sidebar" id="mobile-sidebar">
-            <div class="media-body text-right switch-sm">
-                <label class="switch">
-                    <input type="checkbox" id="sidebar-toggle" checked>
-                    <span class="switch-state"></span>
-                </label>
-            </div>
-        </div>
         <div class="nav-right col">
             <ul class="nav-menus">
-                <li routerLink="/pages/dashboard" #rla="routerLinkActive" routerLinkActive=""
-                    class="onhover-dropdown" [ngClass]="rla.isActive ? 'header-nav-active' : 'txt-white'">
+                <li routerLink="/pages/dashboard" #rla="routerLinkActive" routerLinkActive="" class="onhover-dropdown"
+                    [ngClass]="rla.isActive ? 'header-nav-active' : 'txt-white'">
                     <div class="media-body">
                         <h6 class="m-0 f-16" i18n>
                             Dashboard
@@ -30,7 +22,7 @@
                 <li>
                     <div class="media-body">
                         <h6 class="m-0 txt-white f-16" i18n>
-                            Shceduler
+                            Scheduler
                         </h6>
                     </div>
                 </li>
@@ -175,15 +167,15 @@
                         <div class="media-body">
                             <h6 class="m-0 txt-white p0 f-16">
                                 <img _ngcontent-c3="" alt="#" class="img-40 rounded-circle"
-                                    src="assets/images/user/1.jpg">                              
+                                    src="assets/images/user/1.jpg">
                             </h6>
                         </div>
-                    </div>                   
+                    </div>
                 </li>
                 <li *ngIf="isLoggedIn" class="onhover-dropdown">
-                    <div class="media  align-items-center">                        
+                    <div class="media  align-items-center">
                         <div class="media-body">
-                            <h6 class="m-0 txt-white f-16">                             
+                            <h6 class="m-0 txt-white f-16">
                                 {{currentUser.username}}
                                 <i class="fa fa-angle-down pull-right ml-2"></i>
                             </h6>
@@ -234,8 +226,17 @@
                     </div>
                 </li>
             </ul>
-            <div class="d-lg-none mobile-toggle">
+            <!-- <div class="ed-lg-none mobile-toggl">
                 <i class="icon-more"></i>
+            </div> -->
+            <div class="mobile-sidebar" id="mobile-sidebar">
+                <div class="media-body text-right switch-sm sidebarCollapse">
+                    <a id="sidebarCollapse" href="javascript:void(0)"><i class="icofont icofont-navigation-menu inverted"></i></a>
+                    <!-- <label class="switch">
+                        <input type="checkbox" id="sidebar-toggle" checked>
+                        <span class="switch-state"></span>
+                    </label> -->
+                </div>
             </div>
         </div>
     </div>
