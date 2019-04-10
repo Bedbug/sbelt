@@ -6,8 +6,10 @@ import { ContentComponent } from './layouts/content/content.component';
 // Routes
 import { content } from "./shared/routes/content.routes";
 import { LandingComponent } from './landing/landing.component';
-import { LoginComponent } from './pages/authentication/login/login.component';
+
 import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './authentication/login/login.component';
+
 
 
 const appRoutes: Routes = [

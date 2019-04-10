@@ -13,7 +13,10 @@ export interface Menu {
 export const MENUITEMS: Menu[] = [
   { 
     headTitle: 'General'
-  }, 
+  },  
+  {
+    path: '/pages/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'link'
+  },
   {
     path: '/pages/stater-kit', title: 'Dashboard', icon: 'icon-desktop', type: 'link'
   },

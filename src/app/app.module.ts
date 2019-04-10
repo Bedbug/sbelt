@@ -11,19 +11,20 @@ import { ContentComponent } from './layouts/content/content.component';
 import { ConfigModule, ConfigService } from './services/config.service';
 import * as $ from 'jquery';
 import { LandingComponent } from './landing/landing.component';
-import { LoginComponent } from './pages/authentication/login/login.component';
 import { JwtInterceptor } from './helpers/jws.interceptor';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { fakeBackendProvider } from './helpers/fake-backend';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { LoginWithImageComponent } from './pages/authentication/login-with-image/login-with-image.component';
-import { LoginWithVideoComponent } from './pages/authentication/login-with-video/login-with-video.component';
-import { RegisterComponent } from './pages/authentication/register/register.component';
-import { RegisterWithImageComponent } from './pages/authentication/register-with-image/register-with-image.component';
-import { RegisterWithVideoComponent } from './pages/authentication/register-with-video/register-with-video.component';
-import { UnlockUserComponent } from './pages/authentication/unlock-user/unlock-user.component';
-import { ForgetPasswordComponent } from './pages/authentication/forget-password/forget-password.component';
-import { ResetPasswordComponent } from './pages/authentication/reset-password/reset-password.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { LoginWithImageComponent } from './authentication/login-with-image/login-with-image.component';
+import { LoginWithVideoComponent } from './authentication/login-with-video/login-with-video.component';
+import { RegisterComponent } from './authentication/register/register.component';
+import { RegisterWithImageComponent } from './authentication/register-with-image/register-with-image.component';
+import { RegisterWithVideoComponent } from './authentication/register-with-video/register-with-video.component';
+import { UnlockUserComponent } from './authentication/unlock-user/unlock-user.component';
+import { ForgetPasswordComponent } from './authentication/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './authentication/reset-password/reset-password.component';
+
 
 
 @NgModule({

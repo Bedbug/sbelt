@@ -19,44 +19,45 @@
         </div>
         <div class="nav-right col">
             <ul class="nav-menus">
-                <li>
+                <li routerLink="/pages/dashboard" #rla="routerLinkActive" routerLinkActive="header-nav-active"
+                    class="onhover-dropdown" [class]="rla.isActive ? 'header-nav-active' : 'txt-white'">
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 f-16" i18n>
                             Dashboard
                         </h6>
                     </div>
                 </li>
                 <li>
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 txt-white f-16" i18n>
                             Shceduler
                         </h6>
                     </div>
                 </li>
                 <li>
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 txt-white f-16" i18n>
                             Shift Swap
                         </h6>
                     </div>
                 </li>
                 <li *ngIf="!isAdmin">
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 txt-white f-16" i18n>
                             Availability
                         </h6>
                     </div>
                 </li>
                 <li *ngIf="isAdmin">
-                        <div class="media-body">
-                            <h6 class="m-0 txt-dark f-16" i18n>
-                                Time Off
-                            </h6>
-                        </div>
-                    </li>
+                    <div class="media-body">
+                        <h6 class="m-0 txt-white f-16" i18n>
+                            Time Off
+                        </h6>
+                    </div>
+                </li>
                 <li>
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 txt-white f-16" i18n>
                             Messages
                             <span class="badge badge-pill badge-primary notification">3</span>
                         </h6>
@@ -64,14 +65,14 @@
                 </li>
                 <li>
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 txt-white f-16" i18n>
                             Reports
                         </h6>
                     </div>
                 </li>
                 <li>
                     <div class="media-body">
-                        <h6 class="m-0 txt-dark f-16" i18n>
+                        <h6 class="m-0 txt-white f-16" i18n>
                             Team
                         </h6>
                     </div>
@@ -93,8 +94,8 @@
                     </a>
                 </li> -->
                 <li class="onhover-dropdown">
-                    <a href="javascript:void(0)" class="txt-dark">
-                        <img class="align-self-center pull-right mr-2" src="assets/images/dashboard/translate.png"
+                    <a href="javascript:void(0)" class="txt-white">
+                        <img class="align-self-center pull-right mr-2 inverted" src="assets/images/dashboard/translate.png"
                             alt="header-translate">
                     </a>
                     <ul class="language-dropdown onhover-show-div p-20">
@@ -167,13 +168,22 @@
                     </ul>
 
                 </li> -->
-                <li *ngIf="isLoggedIn" class="onhover-dropdown">
+                <li *ngIf="isLoggedIn" class="onhover-dropdown" style="padding:0;">
                     <div class="media  align-items-center">
                         <!-- <img class="align-self-center pull-right mr-2" src="assets/images/dashboard/user.png"
                             alt="header-user" /> -->
                         <div class="media-body">
-                            <h6 class="m-0 txt-dark f-16">
-                                <img _ngcontent-c3="" alt="#" style="margin-right: 10px;" class="img-30 rounded-circle" src="assets/images/user/1.jpg">
+                            <h6 class="m-0 txt-white p0 f-16">
+                                <img _ngcontent-c3="" alt="#" class="img-30 rounded-circle"
+                                    src="assets/images/user/1.jpg">                              
+                            </h6>
+                        </div>
+                    </div>                   
+                </li>
+                <li *ngIf="isLoggedIn" class="onhover-dropdown">
+                    <div class="media  align-items-center">                        
+                        <div class="media-body">
+                            <h6 class="m-0 txt-white f-16">                             
                                 {{currentUser.username}}
                                 <i class="fa fa-angle-down pull-right ml-2"></i>
                             </h6>
@@ -212,18 +222,17 @@
                         </li>
                     </ul>
                 </li>
-            <li *ngIf="!isLoggedIn" class="onhover-dropdown" (click)="login()">
-                        <div class="media  align-items-center">
-                            <img class="align-self-center pull-right mr-2" src="assets/images/dashboard/user.png"
-                                alt="header-user" />
-                            <div class="media-body">
-                                <h6 class="m-0 txt-dark f-16" i18n>                                    
-                                    Login                                    
-                                </h6>
-                            </div>
+                <li *ngIf="!isLoggedIn" class="onhover-dropdown" (click)="login()">
+                    <div class="media  align-items-center">
+                        <img class="align-self-center pull-right mr-2" src="assets/images/dashboard/user.png"
+                            alt="header-user" />
+                        <div class="media-body">
+                            <h6 class="m-0 txt-white f-16" i18n>
+                                Login
+                            </h6>
                         </div>
-                        
-                    </li>
+                    </div>
+                </li>
             </ul>
             <div class="d-lg-none mobile-toggle">
                 <i class="icon-more"></i>
