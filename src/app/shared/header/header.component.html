@@ -19,8 +19,8 @@
         </div>
         <div class="nav-right col">
             <ul class="nav-menus">
-                <li routerLink="/pages/dashboard" #rla="routerLinkActive" routerLinkActive="header-nav-active"
-                    class="onhover-dropdown" [class]="rla.isActive ? 'header-nav-active' : 'txt-white'">
+                <li routerLink="/pages/dashboard" #rla="routerLinkActive" routerLinkActive=""
+                    class="onhover-dropdown" [ngClass]="rla.isActive ? 'header-nav-active' : 'txt-white'">
                     <div class="media-body">
                         <h6 class="m-0 f-16" i18n>
                             Dashboard
@@ -93,7 +93,7 @@
                             alt="header-browser">
                     </a>
                 </li> -->
-                <li class="onhover-dropdown">
+                <!-- <li class="onhover-dropdown">
                     <a href="javascript:void(0)" class="txt-white">
                         <img class="align-self-center pull-right mr-2 inverted" src="assets/images/dashboard/translate.png"
                             alt="header-translate">
@@ -120,7 +120,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
                 <!-- <li class="onhover-dropdown">
                     <a href="javascript:void(0)" class="txt-dark">
                         <img class="align-self-center pull-right mr-2" src="assets/images/dashboard/notification.png"
@@ -174,7 +174,7 @@
                             alt="header-user" /> -->
                         <div class="media-body">
                             <h6 class="m-0 txt-white p0 f-16">
-                                <img _ngcontent-c3="" alt="#" class="img-30 rounded-circle"
+                                <img _ngcontent-c3="" alt="#" class="img-40 rounded-circle"
                                     src="assets/images/user/1.jpg">                              
                             </h6>
                         </div>
