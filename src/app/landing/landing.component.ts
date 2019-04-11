@@ -11,8 +11,9 @@ export class LandingComponent implements OnInit {
   
   constructor( private router: Router, private authenticationService: AuthenticationService) { 
     const currentUser = this.authenticationService.currentUserValue;
-    if(currentUser)
-      this.router.navigate(['/base']);
+    if(currentUser){      
+      this.router.navigate(['/'+currentUser.role.toLowerCase()+'/dashboard']);
+    }
   }
 
   

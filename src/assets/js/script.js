@@ -25,11 +25,13 @@ $(document).ready(function () {
   //     $(".page-sidebar").addClass("page-sidebar-open");
   //   }
   // });
-  $(window).resize(function () {
-    if ($(window).width() > 1299) {
-      $(".page-body-wrapper").addClass("sidebar-close");
-    }
-  });
+
+  // Check Resize and close sidebar if width exceeds the max
+  // $(window).resize(function () {
+  //   if ($(window).width() > 1299) {
+  //     $(".page-body-wrapper").addClass("sidebar-close");
+  //   }
+  // });
 
   $('#sidebarCollapse').click(function () {
     $(".page-body-wrapper").toggleClass("sidebar-close");

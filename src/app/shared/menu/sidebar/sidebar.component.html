@@ -8,6 +8,7 @@
 <ul class="sidebar-menu">
     <!-- 1st level Menu -->
     <li *ngFor="let menuItem of menuItems">
+            <!-- *ngIf="menuItem.type != 'rolelink' || menuItem.type === 'rolelink' && validateRole(menuItem.role)" -->
         <div class="sidebar-title" *ngIf="menuItem.headTitle">
             {{menuItem.headTitle}}
             <span class="badge badge-{{menuItem.badgeType}} pull-right" *ngIf="menuItem.badgeType">{{menuItem.badgeValue}}</span>
@@ -19,6 +20,11 @@
         </a>
         <!-- Link -->
         <a [routerLink]="!menuItem.type ? null : [menuItem.path]" routerLinkActive="active" class="sidebar-header" *ngIf="menuItem.type === 'link'">
+            <i [class]="menuItem.icon"></i><span>{{menuItem.title}} <span class="badge badge-{{menuItem.badgeType}} ml-3" *ngIf="menuItem.badgeType">{{menuItem.badgeValue}}</span></span>
+            <i class="fa fa-angle-right pull-right" *ngIf="menuItem.children"></i>
+        </a>
+        <!-- Role Link -->
+        <a [routerLink]="!menuItem.type ? null : [menuItem.path]" routerLinkActive="active" class="sidebar-header" *ngIf="menuItem.type === 'rolelink'">
             <i [class]="menuItem.icon"></i><span>{{menuItem.title}} <span class="badge badge-{{menuItem.badgeType}} ml-3" *ngIf="menuItem.badgeType">{{menuItem.badgeValue}}</span></span>
             <i class="fa fa-angle-right pull-right" *ngIf="menuItem.children"></i>
         </a>

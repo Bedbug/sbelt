@@ -1,5 +1,4 @@
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from 'src/app/dashboard/dashboard.component';
 
 export const content: Routes = [
   {
@@ -9,5 +8,9 @@ export const content: Routes = [
   {
     path: 'pages',
     loadChildren: './pages/page/page.module#PageModule'
+  },
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
   }
 ];

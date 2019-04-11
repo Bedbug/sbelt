@@ -4,6 +4,7 @@ export interface Menu {
   title?: string;
   icon?: string;
   type?: string;
+  role?: string;
   headTitle?: string,
   badgeType?: string;
   badgeValue?: string;
@@ -15,10 +16,51 @@ export const MENUITEMS: Menu[] = [
     headTitle: 'General'
   },  
   {
-    path: '/pages/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'link'
+    path: '/admin/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
   },
   {
-    path: '/pages/stater-kit', title: 'Dashboard', icon: 'icon-desktop', type: 'link'
+    path: '/admin/sheduler', title: 'Sheduler', icon: 'icon-desktop', type: 'rolelink' , role: 'admin'
+  },
+  {
+    path: '/admin/shiftswap', title: 'Shift Swap', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+  },
+  {
+    path: '/admin/availability', title: 'Availability', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+  },
+  {
+    path: '/user/messages', title: 'Messages', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+  },
+  {
+    path: '/admin/reports', title: 'Reports', icon: 'icon-desktop', type: 'rolelink', role: 'admn'
+  },
+  {
+    path: '/admin/team', title: 'Team', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+  },
+  
+  {
+    path: '/user/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+  },
+  {
+    path: '/user/sheduler', title: 'Sheduler', icon: 'icon-desktop', type: 'rolelink' , role: 'user'
+  },
+  {
+    path: '/user/shiftswap', title: 'Shift Swap', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+  },
+  {
+    path: '/user/timeoff', title: 'Time Off', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+  },
+  {
+    path: '/user/messages', title: 'Messages', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+  },
+  {
+    path: '/user/reports', title: 'Reports', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+  },
+  {
+    path: '/user/team', title: 'Team', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+  },
+  
+  {
+    path: '/pages/stater-kit', title: 'Starter Kit', icon: 'icon-desktop', type: 'link'
   },
   {
     title: 'Starter Kit', icon: 'icon-anchor', type: 'sub', children: [{
