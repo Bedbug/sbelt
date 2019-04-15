@@ -16,47 +16,47 @@ export const MENUITEMS: Menu[] = [
     headTitle: 'General'
   },  
   {
-    path: '/admin/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+    path: '/Admin/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/admin/sheduler', title: 'Sheduler', icon: 'icon-desktop', type: 'rolelink' , role: 'admin'
+    path: '/Admin/sheduler', title: 'Sheduler', icon: 'icon-calendar', type: 'rolelink' , role: 'Admin'
   },
   {
-    path: '/admin/shiftswap', title: 'Shift Swap', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+    path: '/Admin/shiftswap', title: 'Shift Swap', icon: 'icon-back-left', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/admin/availability', title: 'Availability', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+    path: '/Admin/availability', title: 'Availability', icon: 'icon-briefcase', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/user/messages', title: 'Messages', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+    path: '/user/messages', title: 'Messages', icon: 'icon-email', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/admin/reports', title: 'Reports', icon: 'icon-desktop', type: 'rolelink', role: 'admn'
+    path: '/Admin/reports', title: 'Reports', icon: 'icon-bar-chart', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/admin/team', title: 'Team', icon: 'icon-desktop', type: 'rolelink', role: 'admin'
+    path: '/Admin/team', title: 'Team', icon: 'icon-user', type: 'rolelink', role: 'Admin'
   },
   
   {
-    path: '/user/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+    path: '/user/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'User'
   },
   {
-    path: '/user/sheduler', title: 'Sheduler', icon: 'icon-desktop', type: 'rolelink' , role: 'user'
+    path: '/user/sheduler', title: 'Sheduler', icon: 'icon-calendar', type: 'rolelink' , role: 'User'
   },
   {
-    path: '/user/shiftswap', title: 'Shift Swap', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+    path: '/user/shiftswap', title: 'Shift Swap', icon: 'icon-back-left', type: 'rolelink', role: 'User'
   },
   {
-    path: '/user/timeoff', title: 'Time Off', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+    path: '/user/timeoff', title: 'Time Off', icon: 'icon-game', type: 'rolelink', role: 'User'
   },
   {
-    path: '/user/messages', title: 'Messages', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+    path: '/user/messages', title: 'Messages', icon: 'icon-email', type: 'rolelink', role: 'User'
   },
   {
-    path: '/user/reports', title: 'Reports', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+    path: '/user/reports', title: 'Reports', icon: 'icon-bar-chart', type: 'rolelink', role: 'User'
   },
   {
-    path: '/user/team', title: 'Team', icon: 'icon-desktop', type: 'rolelink', role: 'user'
+    path: '/user/team', title: 'Team', icon: 'icon-user', type: 'rolelink', role: 'User'
   },
   
   {

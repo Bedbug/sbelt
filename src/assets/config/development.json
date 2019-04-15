@@ -1,6 +1,7 @@
 {
   "debugging": true,
   "API_ENDPOINTS": {
-    "USER": "api/v1/user"
+    "USER": "api/v1/user",
+    "SHIFT": "api/v1/shift"
   }
 }

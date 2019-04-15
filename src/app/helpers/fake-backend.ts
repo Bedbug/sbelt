@@ -5,6 +5,8 @@ import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
 import { User} from '../models/user';
 import { Role } from '../models/role';
+import { ShiftSwapRequest } from '../models/shiftswap-request';
+
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -14,10 +16,19 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             { id: 2, username: 'user', password: 'user', firstName: 'Normal', lastName: 'User', role: Role.User }
         ];
 
+        const shiftSwapRequests: ShiftSwapRequest[] = [
+            {id:"1", status: "pending"},{id:"2", status: "pending"},{id:"3", status: "pending"},{id:"4", status: "pending"},{id:"5", status: "pending"},
+            {id:"5", status: "awaiting"},{id:"6", status: "awaiting"},{id:"7", status: "awaiting"},{id:"8", status: "awaiting"},{id:"9", status: "awaiting"}
+        ]
+
         const authHeader = request.headers.get('Authorization');
         const isLoggedIn = authHeader && authHeader.startsWith('Bearer fake-jwt-token');
         const roleString = isLoggedIn && authHeader.split('.')[1];
         const role = roleString ? Role[roleString] : null;
+
+        
+        console.log(roleString);
+
 
         // wrap in delayed observable to simulate server api call
         return of(null).pipe(mergeMap(() => {
@@ -56,6 +67,12 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             if (request.url.endsWith('/users') && request.method === 'GET') {
                 if (role !== Role.Admin) return unauthorised();
                 return ok(users);
+            }
+
+            // get all shift requests (admin only)
+            if (request.url.endsWith('/requests') && request.method === 'GET') {
+                if (role !== Role.Admin) return unauthorised();
+                return ok(shiftSwapRequests);
             }
 
             // pass through any requests not handled above

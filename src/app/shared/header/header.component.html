@@ -11,8 +11,8 @@
     <div class="main-header-right row" header-bg-color="bg-success">
         <div class="nav-right col">
             <ul class="nav-menus">
-                <li routerLink="/{{currentUser.role}}/dashboard" #rla="routerLinkActive" routerLinkActive="" class="onhover-dropdown"
-                    [ngClass]="rla.isActive ? 'header-nav-active' : 'txt-white'">
+                <li routerLink="/{{currentUser.role}}/dashboard" #rla="routerLinkActive" routerLinkActive=""
+                    class="onhover-dropdown" [ngClass]="rla.isActive ? 'header-nav-active' : 'txt-white'">
                     <div class="media-body">
                         <h6 class="m-0 f-16" i18n>
                             Dashboard
@@ -160,10 +160,8 @@
                     </ul>
 
                 </li> -->
-                <li *ngIf="isLoggedIn" class="onhover-dropdown" style="padding:0;">
-                    <div class="media  align-items-center">
-                        <!-- <img class="align-self-center pull-right mr-2" src="assets/images/dashboard/user.png"
-                            alt="header-user" /> -->
+                <li *ngIf="isLoggedIn" class="onhover-dropdown" style="padding:0;margin: 0; margin-left: auto;">
+                    <div class="media  align-items-center">                   
                         <div class="media-body">
                             <h6 class="m-0 txt-white p0 f-16">
                                 <img _ngcontent-c3="" alt="#" class="img-40 rounded-circle"
@@ -229,16 +227,19 @@
             <!-- <div class="ed-lg-none mobile-toggl">
                 <i class="icon-more"></i>
             </div> -->
-            <div class="mobile-sidebar" id="mobile-sidebar">
-                <div class="media-body text-right switch-sm sidebarCollapse">
-                    <a id="sidebarCollapse" href="javascript:void(0)"><i class="icofont icofont-navigation-menu inverted"></i></a>
+
+        </div>        
+        
+        <div class="mobile-sidebar" id="mobile-sidebar">
+                <div class="media-body text-right switch-sm sidebarCollapse" style="margin-right: 20px;">
+                    <a id="sidebarCollapse" href="javascript:void(0)"><i
+                            class="icofont icofont-navigation-menu inverted"></i></a>
                     <!-- <label class="switch">
-                        <input type="checkbox" id="sidebar-toggle" checked>
-                        <span class="switch-state"></span>
-                    </label> -->
+                            <input type="checkbox" id="sidebar-toggle" checked>
+                            <span class="switch-state"></span>
+                        </label> -->
                 </div>
             </div>
-        </div>
     </div>
 </div>
 <!--Page Header Ends-->
