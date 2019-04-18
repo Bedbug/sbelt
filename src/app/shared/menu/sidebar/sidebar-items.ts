@@ -16,25 +16,25 @@ export const MENUITEMS: Menu[] = [
     headTitle: 'General'
   },  
   {
-    path: '/Admin/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'Admin'
+    path: '/admin/dashboard', title: 'Dashboard', icon: 'icon-desktop', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/Admin/sheduler', title: 'Sheduler', icon: 'icon-calendar', type: 'rolelink' , role: 'Admin'
+    path: '/admin/sheduler', title: 'Sheduler', icon: 'icon-calendar', type: 'rolelink' , role: 'Admin'
   },
   {
-    path: '/Admin/shiftswap', title: 'Shift Swap', icon: 'icon-back-left', type: 'rolelink', role: 'Admin'
+    path: '/admin/shiftswap', title: 'Shift Swap', icon: 'icon-back-left', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/Admin/availability', title: 'Availability', icon: 'icon-briefcase', type: 'rolelink', role: 'Admin'
+    path: '/admin/availability', title: 'Availability', icon: 'icon-briefcase', type: 'rolelink', role: 'Admin'
   },
   {
     path: '/user/messages', title: 'Messages', icon: 'icon-email', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/Admin/reports', title: 'Reports', icon: 'icon-bar-chart', type: 'rolelink', role: 'Admin'
+    path: '/admin/reports', title: 'Reports', icon: 'icon-bar-chart', type: 'rolelink', role: 'Admin'
   },
   {
-    path: '/Admin/team', title: 'Team', icon: 'icon-user', type: 'rolelink', role: 'Admin'
+    path: '/admin/team', title: 'Team', icon: 'icon-user', type: 'rolelink', role: 'Admin'
   },
   
   {
